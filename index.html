@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+  <title>GitHub - Dynamic API</title>
+</head>
+
+<body>
+
+
+
+  <ul class="items-list"></ul>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+
+
+    <script type="text/template" data-template-name="itemResults">
+        <div class="container">
+          <div class="item">
+            <div><img src="<% images %>" title="<% description %>"></div>
+            <div><a href="<% url %>"><p class="ellipsis"><% title %></p></a></div>
+            <div class="pricing"><% price %> <% currency %></div>
+            <div><% shop %></div>
+          </div>
+        </div>
+
+    </script>
+
+
+
+
+
+
+  <script type="text/javascript" src="main.js"></script>
+
+</body>
+
+</html>
