@@ -15,7 +15,6 @@ $header-background-color: $wild-sand;
 
 .header-wrapper {
   background-color: $header-background-color;
-  padding-left: 150px;
   min-width: 1000px;
   vertical-align: middle;
 
@@ -60,6 +59,9 @@ $header-background-color: $wild-sand;
 }
 
 .main-content-container {
+  float: right;
+  margin-left: 20px;
+  padding-left: 20px;
   color: $primary-font-color;
 
   ul {
@@ -87,7 +89,7 @@ $header-background-color: $wild-sand;
 
 .profile-info-container {
   display: inline-block;
-  width: 450px;
+  width: 300px;
   float: left;
 }
 
@@ -129,7 +131,7 @@ $header-background-color: $wild-sand;
 
 .secondary-main-container {
   display: inline-block;
-  width: 950px;
+  width: 880px;
   float: left;
 }
 
@@ -169,12 +171,45 @@ button {
   button p:hover {
     background-color: #e7e7e7;
   }
+}
+
+.repo-list {
+  padding: 0;
+}
+
+.repo-name {
+  display: inline-block;
+  font-size: 20px;
+  text-decoration: none;
+
+  a {
+    padding-top: 10px;
+    padding-left: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: $header-hover-color;
+  }
 
 }
 
+.repo-container {
+  margin-right: 70px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  height: 140px;
+  vertical-align: middle;
+}
 
+.repo-right {
+  display: inline-block;
+  width: 70px;
+}
 
-
+.repo-left {
+  display: inline-block;
+  width: 700px;
+}
 
 
 ul {

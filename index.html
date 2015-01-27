@@ -76,16 +76,37 @@
         </ul>
       </div>
 
-      <ol class="repo-list">
+      <script src="bower_components/jquery/dist/jquery.js"></script>
+      <script src="bower_components/underscore/underscore.js"></script>
 
-    </ol>
+      <ol class="repo-list"></ol>
+
+
+        <script type="text/template" data-template-name="repo-list">
+            <div class="repo-container">
+
+              <div class="repo-left">
+                <div class="repo-name"><a href="#"><p><% name %></p></a></div>
+              </div>
+
+              <div class="repo-right">
+                <div class="repo-list-stats"><p><% language %> <% starred %> <% forks %></p></div>
+              </div>
+
+            </div>
+        </script>
+
+
+
   </div>
 </div>
 
   <footer></footer>
 
-  <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="bower_components/underscore/underscore.js"></script>
+
+  <script type="text/javascript" src="repo_data.js"></script>
+  <script type="text/javascript" src="starred_data.js"></script>
+
   <script type="text/javascript" src="main.js"></script>
 </body>
 </html>

@@ -2,7 +2,7 @@
   'use strict';
 
   var repoResults = rawRepoData;
-  var userResults = rawUserData;
+  // var userResults = rawUserData;
 
   $(document).ready(function(){
 
