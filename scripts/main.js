@@ -2,6 +2,9 @@
   'use strict';
 
   var baseUrl = "https://api.github.com/users/mcleanbh/";
+  var repoUrl = "https://api.github.com/users/mcleanbh/repos/";
+  var starUrl = "https://api.github.com/users/mcleanbh/starred/";
+  var orgUrl = "https://api.github.com/users/mcleanbh/orgs/";
 
   $(document).ready(function() {
     if (typeof githubToken !== 'undefined' ){
@@ -21,7 +24,7 @@
         var repoText = renderTemplate('repo-list', {
           name: repo.name,
           description: repo.description,
-          updated_at: repo.updated_at,
+          updated_at: moment(repo.updated_at).fromNow(),
           language: repo.language,
           stargazers_url: repo.stargazers_url,
           stargazers_count: repo.stargazers_count,
@@ -41,8 +44,6 @@
     return $template;
   }
 })();
-
-
 
 
 // _.template(templateString, [settings])
