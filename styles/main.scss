@@ -37,9 +37,18 @@ $header-background-color: $wild-sand;
   vertical-align: middle;
 }
 
-.nav-right .avatar {
-  width: 20px;
-  height: 20px;
+.nav-right .avatar-anchor {
+  text-decoration: none;
+  padding-left: 5px;
+  color: $primary-font-color;
+  font-size: 13px;
+  font-weight: bold;
+  text-overflow: ellipsis;
+
+  .avatar {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .nav-middle a {
@@ -133,6 +142,11 @@ $header-background-color: $wild-sand;
   display: inline-block;
   width: 880px;
   float: left;
+}
+
+.secondary-main-container-tabs p .conribs {
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
 }
 
 
