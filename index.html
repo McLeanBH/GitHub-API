@@ -10,7 +10,7 @@
   <div class="header-wrapper">
 
     <ul class="nav-left">
-      <li class="logo"><img src="logos/github-logo.png"></li>
+      <li class="logo"><a href="http://github.com/"><img src="logos/github-logo.png"></a></li>
 
       <li class="search-bar">
         <form><input class="search-field" id="search-field" type="search" placeholder="Search GitHub"></form>
@@ -18,10 +18,10 @@
     </ul>
 
     <ul class="nav-middle">
-        <li class="links"><a href="https://github.com/explore/">Explore</a></li>
-        <li class="links"><a href="https://gist.github.com/">Gist</a></li>
-        <li class="links"><a href="https://github.com/blog/">Blog</a></li>
-        <li class="links"><a href="https://help.github.com/">Help</a></li>
+        <li class="links"><a href="https://github.com/explore/" id="explore">Explore</a></li>
+        <li class="links"><a href="https://gist.github.com/" id="gist">Gist</a></li>
+        <li class="links"><a href="https://github.com/blog/" id="blog">Blog</a></li>
+        <li class="links"><a href="https://help.github.com/" id="help">Help</a></li>
     </ul>
 
     <ul class="nav-right">
@@ -56,7 +56,7 @@
       </ul>
 
     <div class="followers-and-orgs">
-      <h2></h2>
+
     </div>
   </div>
 
@@ -64,49 +64,62 @@
 
       <div class="secondary-main-container-tabs">
         <ul>
-          <li class="tabs"><p class="contribs"><img src="logos/contibs-logo.png">Contributions</p></li>
+          <li class="tabs"><p id="contrib-tab"><img src="logos/contibs-logo.png">Contributions</p></li>
 
-          <li class="tabs"><p class="repos"><img src="logos/repo-logo.png">Repositories</p></li>
+          <li class="tabs"><p id="repo-tab"><img src="logos/repo-logo.png">Repositories</p></li>
 
-          <li class="tabs"><p class="activity"><img src="logos/pa-logo.png">Public Activity</p></li>
+          <li class="tabs"><p id="activity-tab"><img src="logos/pa-logo.png">Public Activity</p></li>
 
           <li class="tabs">
-            <button type="submit"><p class="edit"><img src="logos/edit3.png">Edit profile</p></button>
+            <button type="submit"><p id="edit-btn"><img src="logos/edit3.png">Edit profile</p></button>
           </li>
         </ul>
       </div>
 
       <script src="bower_components/jquery/dist/jquery.js"></script>
       <script src="bower_components/underscore/underscore.js"></script>
+      <script src="bower_components/moment/moment.js"></script>
 
-      <ol class="repo-list"></ol>
+
+        <ul class="repo-list"></ul>
 
 
-        <script type="text/template" data-template-name="repo-list">
-            <div class="repo-container">
+          <script type="text/template" data-template-name="repo-list">
+              <div class="repo-container">
 
-              <div class="repo-left">
-                <div class="repo-name"><a href="#"><p><% name %></p></a></div>
+                <div class="repo-left">
+                  <div class="repo-name"><a href="#"><p><% name %></p></a></div>
+                </div>
+
+                <div class="repo-right">
+                  <div class="repo-list-stats"><p><% language %> <% starred %> <% forks %></p></div>
+                </div>
               </div>
 
-              <div class="repo-right">
-                <div class="repo-list-stats"><p><% language %> <% starred %> <% forks %></p></div>
-              </div>
-
-            </div>
-        </script>
+          </script>
+        </div>
+      </div>
 
 
+  <!--
+    <li>
+      <span class="name"><%= name %></span>
+      <%= pushed_at %>
+      <%= language %>
+      <%= stargazers_count %>
+      <%= forks_count %>
+      <%= stargazers_url %>
+      <%= forks_url %>
+      <%= repo_url %>
+    </li>
+  </script> -->
 
-  </div>
-</div>
 
   <footer></footer>
 
+  <script src="scripts/main.js"></script>
+  <script src="scripts/token.js"></script>
 
-  <script type="text/javascript" src="repo_data.js"></script>
-  <script type="text/javascript" src="starred_data.js"></script>
-  <script type="text/javascript" src="token.js"></script>
-  <script type="text/javascript" src="main.js"></script>
+
 </body>
 </html>

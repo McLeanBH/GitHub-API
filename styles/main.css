@@ -54,9 +54,9 @@ html {
   width: 360px; }
 
 .main-content-container {
-  float: right;
-  margin-left: 20px;
+  margin: 0 auto;
   padding-left: 20px;
+  width: 1080px;
   color: #333; }
   .main-content-container ul {
     display: block;
@@ -112,8 +112,7 @@ html {
 
 .secondary-main-container {
   display: inline-block;
-  width: 880px;
-  float: left; }
+  width: 650px; }
 
 .secondary-main-container-tabs p .conribs {
   border-right: 1px solid #eee;
@@ -131,9 +130,9 @@ html {
   .tabs p {
     margin: 0 auto; }
 
-.contribs,
-.repos,
-.activity {
+#contrib-tab,
+#repo-tab,
+#activity-tab {
   padding-right: 20px; }
 
 button {
@@ -149,22 +148,23 @@ button {
 
 .repo-name {
   display: inline-block;
-  font-size: 20px;
-  text-decoration: none; }
+  text-decoration: none;
+  font-size: 20px; }
   .repo-name a {
     padding-top: 10px;
     padding-left: 10px;
     text-decoration: none;
+    color: #4484c2;
     font-size: 20px;
-    font-weight: bold;
-    color: #4484c2; }
+    font-weight: bold; }
 
 .repo-container {
   margin-right: 70px;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
   height: 140px;
-  vertical-align: middle; }
+  vertical-align: middle;
+  width: 800px; }
 
 .repo-right {
   display: inline-block;
@@ -172,7 +172,7 @@ button {
 
 .repo-left {
   display: inline-block;
-  width: 700px; }
+  width: 550px; }
 
 ul {
   list-style: none; }

@@ -1,23 +1,30 @@
 (function(){
   'use strict';
 
-  var repoResults = rawRepoData;
-  // var userResults = rawUserData;
+  var baseUrl = "https://api.github.com/users/mcleanbh/";
 
-  $(document).ready(function(){
-
-    var $list = $('.repo-list');
-
-    repoResults.forEach(function(repo){
-      var repoText = renderTemplate('repo-list', {
-        name: repo.name,
-        language: repo.language,
-        starred: repo.stargazers_count,
-        forks: repo.forks_count,
-      });
-      $list.append(repoText);
+  $(document).ready(function() {
+    if (typeof githubToken !== 'undefined' ){
+    $.ajaxSetup({
+      headers: {'Authorization': 'token ' + githubToken }
     });
-  });
+  }
+
+  var repoTemplate = _.template($('[data-template-name=repo]').text());
+  var $list = $('.repo-list');
+
+    $.ajax(baseUrl + "repos").done(function(repos) {
+      _.each(repos, function(repos){
+        var repoText = renderTemplate('repo-list', {
+          name: repos.name,
+          language: repos.language,
+          starred: repos.stargazers_count,
+          forks: repos.forks_count,
+        });
+        $list.append(repoText);
+      });
+      });
+    });
 
   function renderTemplate(name, data) {
     var $template = $('[data-template-name=' + name + ']').text();
@@ -26,8 +33,9 @@
     });
     return $template;
   }
-
 })();
 
 
-// _.template(templateString, [settings]) 
+
+
+// _.template(templateString, [settings])

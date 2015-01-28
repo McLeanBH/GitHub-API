@@ -68,9 +68,9 @@ $header-background-color: $wild-sand;
 }
 
 .main-content-container {
-  float: right;
-  margin-left: 20px;
+  margin: 0 auto;
   padding-left: 20px;
+  width: 1080px;
   color: $primary-font-color;
 
   ul {
@@ -140,8 +140,7 @@ $header-background-color: $wild-sand;
 
 .secondary-main-container {
   display: inline-block;
-  width: 880px;
-  float: left;
+  width: 650px;
 }
 
 .secondary-main-container-tabs p .conribs {
@@ -170,9 +169,9 @@ $header-background-color: $wild-sand;
   }
 }
 
-.contribs,
-.repos,
-.activity {
+#contrib-tab,
+#repo-tab,
+#activity-tab {
   padding-right: 20px;
 }
 
@@ -193,18 +192,17 @@ button {
 
 .repo-name {
   display: inline-block;
-  font-size: 20px;
   text-decoration: none;
+  font-size: 20px;
 
   a {
     padding-top: 10px;
     padding-left: 10px;
     text-decoration: none;
+    color: $header-hover-color;
     font-size: 20px;
     font-weight: bold;
-    color: $header-hover-color;
   }
-
 }
 
 .repo-container {
@@ -213,6 +211,7 @@ button {
   border-bottom: 1px solid #eee;
   height: 140px;
   vertical-align: middle;
+  width: 800px
 }
 
 .repo-right {
@@ -222,7 +221,7 @@ button {
 
 .repo-left {
   display: inline-block;
-  width: 700px;
+  width: 550px;
 }
 
 
