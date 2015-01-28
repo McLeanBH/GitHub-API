@@ -28,3 +28,6 @@
   }
 
 })();
+
+
+// _.template(templateString, [settings]) 
