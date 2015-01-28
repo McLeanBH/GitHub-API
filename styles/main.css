@@ -54,7 +54,7 @@ html {
   width: 360px; }
 
 .main-content-container {
-  margin: 0 auto;
+  margin: 0 200px;
   padding-left: 20px;
   width: 1080px;
   color: #333; }
@@ -143,20 +143,37 @@ button {
   button button p:hover {
     background-color: #e7e7e7; }
 
+ul {
+  list-style: none; }
+
+li {
+  text-decoration: none; }
+
 .repo-list {
   padding: 0; }
 
-.repo-name {
+#name-and-url {
   display: inline-block;
   text-decoration: none;
   font-size: 20px; }
-  .repo-name a {
-    padding-top: 10px;
-    padding-left: 10px;
+  #name-and-url a {
+    padding-top: 30px;
     text-decoration: none;
     color: #4484c2;
     font-size: 20px;
     font-weight: bold; }
+    #name-and-url a a:active {
+      text-decoration: underline; }
+
+#description,
+#updated {
+  margin-top: 16px;
+  padding-top: 16px;
+  color: #888; }
+
+#stargazers,
+#forks {
+  text-decoration: none; }
 
 .repo-container {
   margin-right: 70px;
@@ -164,20 +181,31 @@ button {
   border-bottom: 1px solid #eee;
   height: 140px;
   vertical-align: middle;
+  height: 160px;
   width: 800px; }
+  .repo-container ul {
+    vertical-align: middle; }
 
-.repo-right {
-  display: inline-block;
-  width: 70px; }
-
-.repo-left {
-  display: inline-block;
-  width: 550px; }
-
-ul {
-  list-style: none; }
-
-li {
+.repo-right a {
+  width: 67px;
+  float: right;
+  color: #888;
   text-decoration: none; }
+  .repo-right a li {
+    display: inline-block;
+    text-decoration: none; }
+
+.repo-left a {
+  width: 550px;
+  float: left; }
+  .repo-left a li {
+    display: block; }
+
+.page-bottom-container {
+  border-bottom: 1px solid #eee;
+  height: 75px; }
+
+footer {
+  height: 100px; }
 
 /*# sourceMappingURL=main.css.map */

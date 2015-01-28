@@ -13,13 +13,20 @@
   var repoTemplate = _.template($('[data-template-name=repo]').text());
   var $list = $('.repo-list');
 
+
+
     $.ajax(baseUrl + "repos").done(function(repos) {
-      _.each(repos, function(repos){
+      _.each(repos, function(repo){
+        console.log(repo);
         var repoText = renderTemplate('repo-list', {
-          name: repos.name,
-          language: repos.language,
-          starred: repos.stargazers_count,
-          forks: repos.forks_count,
+          name: repo.name,
+          description: repo.description,
+          updated_at: repo.updated_at,
+          language: repo.language,
+          stargazers_url: repo.stargazers_url,
+          stargazers_count: repo.stargazers_count,
+          forks_url: repo.forks_url,
+          forks_count: repo.forks_count,
         });
         $list.append(repoText);
       });

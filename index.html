@@ -76,47 +76,33 @@
         </ul>
       </div>
 
-      <script src="bower_components/jquery/dist/jquery.js"></script>
-      <script src="bower_components/underscore/underscore.js"></script>
-      <script src="bower_components/moment/moment.js"></script>
-
-
         <ul class="repo-list"></ul>
 
-
-          <script type="text/template" data-template-name="repo-list">
-              <div class="repo-container">
-
-                <div class="repo-left">
-                  <div class="repo-name"><a href="#"><p><% name %></p></a></div>
-                </div>
-
-                <div class="repo-right">
-                  <div class="repo-list-stats"><p><% language %> <% starred %> <% forks %></p></div>
-                </div>
-              </div>
-
-          </script>
-        </div>
       </div>
+    </div>
 
+    <div class="page-bottom-container"></div>
 
-  <!--
-    <li>
-      <span class="name"><%= name %></span>
-      <%= pushed_at %>
-      <%= language %>
-      <%= stargazers_count %>
-      <%= forks_count %>
-      <%= stargazers_url %>
-      <%= forks_url %>
-      <%= repo_url %>
-    </li>
-  </script> -->
+  <footer>  </footer>
 
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/underscore/underscore.js"></script>
+  <script src="bower_components/moment/moment.js"></script>
 
-  <footer></footer>
-
+  <script type="text/template" data-template-name="repo-list">
+      <div class="repo-container">
+        <ul class="repo-left">
+          <li id="name-and-url"><a href="<% html_url %>"><% name %></a></li>
+          <li id="description"><a><% description %></a></li>
+          <li id="updated"><a><% updated_at %></a></li>
+        </ul>
+        <ul class="repo-right">
+          <li id="forks"><a href="<% forks_url %>" title="Forks"><% forks_count %></a></li>
+          <li id="stargazers"><a href="<% stargazers_url %>" title="Stargazers"><% stargazers_count %></a></li>
+          <li id="language"><a><% language %></a></li>
+        </ul>
+      </div>
+  </script>
   <script src="scripts/main.js"></script>
   <script src="scripts/token.js"></script>
 
