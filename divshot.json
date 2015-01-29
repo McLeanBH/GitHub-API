@@ -1,5 +1,5 @@
 {
-  "name": "github-dynamic-api",
+  "name": "github-creation-dynamic-api",
   "root": "./",
   "clean_urls": true,
   "error_page": "error.html"
