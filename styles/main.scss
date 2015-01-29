@@ -14,6 +14,7 @@ $header-background-color: $wild-sand;
 }
 
 .header-wrapper {
+  padding-left: 200px;
   background-color: $header-background-color;
   min-width: 1000px;
   vertical-align: middle;
@@ -38,12 +39,12 @@ $header-background-color: $wild-sand;
 }
 
 .nav-right .avatar-anchor {
-  text-decoration: none;
   padding-left: 5px;
+  text-decoration: none;
+  text-overflow: ellipsis;
   color: $primary-font-color;
   font-size: 13px;
   font-weight: bold;
-  text-overflow: ellipsis;
 
   .avatar {
     width: 20px;
@@ -52,9 +53,9 @@ $header-background-color: $wild-sand;
 }
 
 .nav-middle a {
+  padding: 4px 8px;
   text-decoration: none;
   color: #333;
-  padding: 4px 8px;
   font-size: 13px;
   font-weight: bold;
 }
@@ -85,48 +86,48 @@ $header-background-color: $wild-sand;
 
 .user-name {
   margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  overflow: ellipsis;
+  line-height: 24px;
   color: #666;
   font-weight: 300;
-  line-height: 24px;
-  overflow: ellipsis;
-  border-bottom: 1px solid #eee;
-}
-
-.profile-info-container p {
-  margin: 0 auto;
 }
 
 .profile-info-container {
   display: inline-block;
-  width: 300px;
   float: left;
+  width: 300px;
+
+  p {
+    margin: 0 auto;
+  }
 }
 
 .name {
   margin-top: 5px;
-  font-size: 26px;
-  line-height: 30px;
   overflow: ellipsis;
+  line-height: 30px;
+  font-size: 26px;
 }
 
 .location,
 .email,
 .joined {
   display: block;
+  padding-bottom: 5px;
   vertical-align: middle;
   white-space: nowrap;
-  padding-bottom: 5px;
 }
 
 .email {
-  color: $primary-font-color;
   text-decoration: none;
+  color: $primary-font-color;
 }
 
 .profile-pic img {
+  border-radius: 6px;
   width: 230px;
   height: 230px;
-  border-radius: 6px;
   vertical-align: middle;
 }
 
@@ -166,6 +167,11 @@ $header-background-color: $wild-sand;
 
   p {
     margin: 0 auto;
+
+    a {
+      text-decoration: none;
+      color: #333;
+    }
   }
 }
 
@@ -176,10 +182,10 @@ $header-background-color: $wild-sand;
 }
 
 button {
-  background-color: #f4f4f4;
-  height: 28px;
-  width: 108px;
   border: 1px solid #eee;
+  background-color: #f4f4f4;
+  width: 108px;
+  height: 28px;
 
   button p:hover {
     background-color: #e7e7e7;
@@ -218,7 +224,6 @@ li {
 
 #description,
 #updated {
-  margin-top: 16px;
   padding-top: 16px;
   color: #888;
 }
@@ -232,10 +237,10 @@ li {
   margin-right: 70px;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
-  height: 140px;
-  vertical-align: middle;
-  height: 160px;
   width: 800px;
+  height: 150px;
+  vertical-align: middle;
+
 
   ul {
     vertical-align: middle;

@@ -12,6 +12,7 @@ html {
   box-sizing: border-box; }
 
 .header-wrapper {
+  padding-left: 200px;
   background-color: #f5f5f5;
   min-width: 1000px;
   vertical-align: middle; }
@@ -30,20 +31,20 @@ html {
   vertical-align: middle; }
 
 .nav-right .avatar-anchor {
-  text-decoration: none;
   padding-left: 5px;
+  text-decoration: none;
+  text-overflow: ellipsis;
   color: #333;
   font-size: 13px;
-  font-weight: bold;
-  text-overflow: ellipsis; }
+  font-weight: bold; }
   .nav-right .avatar-anchor .avatar {
     width: 20px;
     height: 20px; }
 
 .nav-middle a {
+  padding: 4px 8px;
   text-decoration: none;
   color: #333;
-  padding: 4px 8px;
   font-size: 13px;
   font-weight: bold; }
 
@@ -66,42 +67,41 @@ html {
 
 .user-name {
   margin-bottom: 15px;
-  color: #666;
-  font-weight: 300;
-  line-height: 24px;
+  border-bottom: 1px solid #eee;
   overflow: ellipsis;
-  border-bottom: 1px solid #eee; }
-
-.profile-info-container p {
-  margin: 0 auto; }
+  line-height: 24px;
+  color: #666;
+  font-weight: 300; }
 
 .profile-info-container {
   display: inline-block;
-  width: 300px;
-  float: left; }
+  float: left;
+  width: 300px; }
+  .profile-info-container p {
+    margin: 0 auto; }
 
 .name {
   margin-top: 5px;
-  font-size: 26px;
+  overflow: ellipsis;
   line-height: 30px;
-  overflow: ellipsis; }
+  font-size: 26px; }
 
 .location,
 .email,
 .joined {
   display: block;
+  padding-bottom: 5px;
   vertical-align: middle;
-  white-space: nowrap;
-  padding-bottom: 5px; }
+  white-space: nowrap; }
 
 .email {
-  color: #333;
-  text-decoration: none; }
+  text-decoration: none;
+  color: #333; }
 
 .profile-pic img {
+  border-radius: 6px;
   width: 230px;
   height: 230px;
-  border-radius: 6px;
   vertical-align: middle; }
 
 .profile-info p img {
@@ -129,6 +129,9 @@ html {
   display: inline-block; }
   .tabs p {
     margin: 0 auto; }
+    .tabs p a {
+      text-decoration: none;
+      color: #333; }
 
 #contrib-tab,
 #repo-tab,
@@ -136,10 +139,10 @@ html {
   padding-right: 20px; }
 
 button {
+  border: 1px solid #eee;
   background-color: #f4f4f4;
-  height: 28px;
   width: 108px;
-  border: 1px solid #eee; }
+  height: 28px; }
   button button p:hover {
     background-color: #e7e7e7; }
 
@@ -167,7 +170,6 @@ li {
 
 #description,
 #updated {
-  margin-top: 16px;
   padding-top: 16px;
   color: #888; }
 
@@ -179,10 +181,9 @@ li {
   margin-right: 70px;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
-  height: 140px;
-  vertical-align: middle;
-  height: 160px;
-  width: 800px; }
+  width: 800px;
+  height: 150px;
+  vertical-align: middle; }
   .repo-container ul {
     vertical-align: middle; }
 

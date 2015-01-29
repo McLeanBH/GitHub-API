@@ -27,12 +27,12 @@
     <ul class="nav-right">
         <li class="links"><a class="avatar-anchor" href="https://github.com/McLeanBH/"><img class="avatar" src="logos/avatar-logo.png">McLeanBH</a></li>
 
-        <li class="links" title="Create New"><img src="logos/create-logo.png">
-          <select class="dropdown">
+        <li class="links" title="Create New"><img src="logos/create-logo.png"></li>
+          <!-- <select class="dropdown">
             <option value="new-repo"><a href="https://github.com/new/"><img src="logos/new-repo-logo.png">New repository</a></option>
             <option value="new-org"><a href="https://github.com/organizations/new/"><img src="logos/new-org-logo.png">New organization</a></option>
-          </select>
-        </li>
+          </select> -->
+
 
         <li class="links" title="You have no unread notifications"><a href="https://github.com/notifications/"><img src="logos/nots-logo.png"></a></li>
 
@@ -64,7 +64,7 @@
 
       <div class="secondary-main-container-tabs">
         <ul>
-          <li class="tabs"><p id="contrib-tab"><img src="logos/contibs-logo.png">Contributions</p></li>
+          <li class="tabs"><p id="contrib-tab"><img src="logos/contibs-logo.png"><a href="contributions.html">Contributions</a></p></li>
 
           <li class="tabs"><p id="repo-tab"><img src="logos/repo-logo.png">Repositories</p></li>
 
@@ -88,6 +88,18 @@
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/underscore/underscore.js"></script>
   <script src="bower_components/moment/moment.js"></script>
+
+  <script type="text/template" data-template-name="profile-info">
+    <ul class="profile-info">
+      <li id="name"><% name %></li>
+      <li id="blog"><% blog %></li>
+      <li id="location"><% location %></li>
+      <li id="email"><% email %></li>
+      <li id="avatar_url"><% avatar_url %></li>
+      <li id="html_url"><% html_url %></li>
+    </ul>
+  </script>
+
 
   <script type="text/template" data-template-name="repo-list">
       <div class="repo-container">
